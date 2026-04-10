@@ -1,0 +1,7 @@
+{
+  "name": "AuraDraw: Spatial AI Air Drawing",
+  "description": "A high-performance, real-time AI air drawing web application with dual-hand spatial interaction and non-destructive transforms.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
