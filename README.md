@@ -1,20 +1,60 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🌌 Neon Air Draw — AI Spatial Interface
 
-# Run and deploy your AI Studio app
+A high-performance, real-time AI air drawing web application that utilizes advanced hand tracking for a "Minority Report" style spatial interface. 
 
-This contains everything you need to run your app locally.
+Draw in the air with your dominant hand and manipulate your creations in real-time with your non-dominant hand using intuitive gestures (Move, Scale, Rotate).
 
-View your app in AI Studio: https://ai.studio/apps/0eff7ce0-106e-4950-8f5b-00a151b8dc5e
+## ✨ Key Features
 
-## Run Locally
+*   **✋ Dual-Hand Interaction**: 
+    *   **Right Hand (Dominant)**: Handles high-precision drawing, selective erasing, and canvas clearing.
+    *   **Left Hand (Secondary)**: Dedicated to spatial transformations (Move, Scale, Rotate) of existing strokes.
+*   **📐 Non-Destructive Transforms**: Strokes retain their original coordinate data. All manipulations (TX, TY, Scale, Rotation) are applied at render time via matrix-based math.
+*   **🕶️ Minimalist Glassmorphism UI**: A premium, aesthetic interface with real-time HUD and visual feedback guides.
+*   **⚡ High Performance**: Native WebGL-based rendering engine optimized for 60FPS fluid interactions.
+*   **🌀 Physics-Based Interaction**: Smooth inertia on stroke movement and snap-to-angle (45°) for rotation.
+*   **📖 Gesture Guide**: Built-in interactive manual explaining every movement.
 
-**Prerequisites:**  Node.js
+## 🛠️ Tech Stack
 
+*   **Frontend**: React + Vite
+*   **Hand Tracking**: @mediapipe/hands
+*   **Animations**: Framer Motion
+*   **Icons**: Lucide React (with custom inline SVG fallbacks for brand icons)
+*   **Styling**: Vanilla CSS (Modern Glassmorphism & Neon Aesthetics)
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🎮 Gesture Manual
+
+### ✍️ Drawing Hand (Right Hand)
+| Gesture | Action |
+|---|---|
+| ☝️ **Index Up** | Start drawing a stroke |
+| 🤏 **Pinch** | Selective eraser (intersects with fingertip path) |
+| ✊ **Fist** | Clear the entire canvas |
+
+### 🖐️ Control Hand (Left Hand)
+| Gesture | Action | Visual Feedback |
+|---|---|---|
+| ✌️ **Two Fingers** | **Move** nearest stroke | Blue crosshair + glow |
+| 🤏 **Pinch & Spread** | **Scale** stroke size | Concentric rings + % label |
+| 🤚 **Open Palm** | **Rotate** stroke | Orange arc + snap points |
+
+## 🚀 Getting Started
+
+1.  **Install Dependencies**:
+    ```bash
+    npm install
+    ```
+2.  **Run Development Server**:
+    ```bash
+    npm run dev
+    ```
+3.  **Use**: Grant camera permissions and raise your hands in view!
+
+## 👨‍💻 Developer
+**Akshat Singh**  
+📸 Instagram: [@code.akshat.in](https://www.instagram.com/code.akshat.in/)  
+🐙 GitHub: [Axshatt](https://github.com/Axshatt)
+
+---
+*Built with passion for AI and Spatial Computing.*
